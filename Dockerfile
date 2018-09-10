@@ -3,7 +3,6 @@ FROM ubuntu:16.04
 # install all prerequisistes
 RUN apt-get update && apt-get install -y \
     apt-transport-https \
-    curl \
     emacs \
     git \
     sudo \
