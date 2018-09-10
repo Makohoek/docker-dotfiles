@@ -19,5 +19,3 @@ RUN useradd --create-home --password bON8jVW68.1Xo makohoek
 RUN usermod --append -G sudo makohoek
 
 USER makohoek
-# download and install the setup script
-RUN cd ~/ && curl -Lks https://raw.githubusercontent.com/Makohoek/dotfiles/master/setup.sh | /bin/bash
