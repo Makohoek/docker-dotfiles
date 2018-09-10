@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
     emacs \
     git \
     sudo \
+    wget \
     vim \
     zsh \
     && rm -rf /var/lib/apt/lists/*
