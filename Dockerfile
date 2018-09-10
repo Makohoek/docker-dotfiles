@@ -12,9 +12,9 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # create an user for testing
-# P0eBBdkQ0Lpi6 is 'dottest' which has been generated with:
-# openssl passwd -crypt 'dottest'
-RUN useradd --create-home --password bON8jVW68.1Xo makohoek
+# oz3uhIS2sP3tE is 'dotfiles' which has been generated with:
+# openssl passwd -crypt 'dotfiles'
+RUN useradd --create-home --password oz3uhIS2sP3tE makohoek
 
 # add that user to the sudoers group
 RUN usermod --append -G sudo makohoek
