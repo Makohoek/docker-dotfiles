@@ -14,7 +14,9 @@ RUN apt-get update && apt-get install -y \
 # create an user for testing
 # oz3uhIS2sP3tE is 'dotfiles' which has been generated with:
 # openssl passwd -crypt 'dotfiles'
-RUN useradd --create-home --password oz3uhIS2sP3tE makohoek
+# shell is zsh, as there is a bug on unset $USER in rcm
+# https://github.com/thoughtbot/rcm/issues/165
+RUN useradd --create-home --password oz3uhIS2sP3tE makohoek --shell /bin/zsh
 
 # add that user to the sudoers group
 RUN usermod --append -G sudo makohoek
