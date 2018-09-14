@@ -1,13 +1,14 @@
-FROM ubuntu:16.04
+FROM ubuntu
 
 # install all prerequisistes
 RUN apt-get update && apt-get install -y \
     apt-transport-https \
     emacs \
     git \
+    gnupg \
     sudo \
-    wget \
     vim \
+    wget \
     zsh \
     && rm -rf /var/lib/apt/lists/*
 
